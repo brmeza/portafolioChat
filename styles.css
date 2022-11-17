@@ -1,12 +1,16 @@
-
+body{
+    margin: 0;
+    padding: 0;
+}
 main{
     background: rgb(111,115,116);
     background: linear-gradient(354deg, rgba(111,115,116,1) 0%, rgba(247,255,252,1) 100%);
-    height: calc(96vh - 2.5rem);
+    /* height: calc(96vh - 2.5rem); */
+    height: 97vh;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    padding: 1.25rem;
+    padding: 1rem;
 }
 
 .chat{
@@ -61,7 +65,7 @@ main{
 }
 
 .respuesta{
-    margin: 0.625rem;
+    margin: 0.225rem;
     border-radius: 0.375rem;
     background-color: rgba(255, 255, 255, 0.164);
     width: 96%;
