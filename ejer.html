@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis&family=Open+Sans&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <title>CHAT-BOT</title>
+    <script type="text/javascript">
+        function btValidar(){
+            var objetivo="correo electronico Valido"
+            var expreg= /[A-Za-z]+@[a-z]+\.[a-z]/i;
+            var texto = document.getElementById("texto").value;
+
+            if(expreg.test(texto))
+            alert("Es: "+objetivo);
+            else
+            alert("no es "+objetivo);
+        }
+    </script>
+</head>
+<body>
+    <h1>expreciones regulares</h1>
+    <input type="text" name="texto" id="texto">
+    <button onclick="btValidar()">Evaluar</button>
+
+</body>
+</html>

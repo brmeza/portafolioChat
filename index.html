@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" 
+    />
+    <title>CHATBOT</title>
+    
+</head>
+<body>
+    <img class="imagen_fondo" src="./img/robot.png" alt="robot" >
+    <main>
+        <div class="chat">
+            <h1 class="titulo">CHAT-BOT</h1>
+            <section class="mensaje">
+                <input type="text" value="" placeholder="prueba con un hola.. :)" name="text" id="txtPregunta" class="cuadroTexto">
+                <input type="button" value="" onclick="evaluarCaso()" class="btnEnviar">
+            </section>
+    
+            <div class="valid">
+                <p id="res1" class="desaparecer">
+                </p>
+                <p id="res2" class="desaparecer">
+                </p>
+                <p id="res3" class="desaparecer">
+                </p>
+                <p id="res4" class="desaparecer">
+                </p>
+                <p id="res5" class="desaparecer">
+                </p>
+                <p id="res6" class="desaparecer">
+                </p>
+                <p id="res7" class="desaparecer">
+                </p>
+                <p id="res8" class="desaparecer">
+                </p>
+            </div>
+            <div class="respuesta">
+                <p id="respuesta" class="respuesta__parraf">
+                </p>
+            </div>
+    
+            <div class="redes">
+                <div class="red linkedin"><a href="https://www.linkedin.com/in/brayan-meza-pantoja-2234b9233"><img src="./img/linkedin.svg" alt="linkedin"></a></div>
+                <div class="red twitter"><a href="https://twitter.com/BryanMez09"><img src="./img/twitter.svg" alt="twitter"></a></div>
+            </div>
+        </div>
+    </main>
+    
+    
+    <script type="text/javascript">
+        let cadena, codigo, respuesta,texto;
+        let inicial= RegExp("(HOLA|OLA|BUENAS|SALUDOS)");
+        let saberSobreEl= RegExp("(SABER|EL|SOBRE)");
+        let conocimientos= RegExp("(CONOCIMIENTOS|SABE)");
+        let servicios= RegExp("(SERVICIOS|SERVICIO)");
+        let proyectos= RegExp("(PROYECTO|PROYECTOS)");
+        let contactarlo= RegExp("(CONTACTARLO|CONTACTO|CONTACTA)");
+        let gracias= RegExp("(GRACIAS|GRACI)");
+        let temas= RegExp("(TEMAS|TEMA)");
+        
+        let nem=0;
+
+        function evaluarCaso(){
+            cadena=document.getElementById("txtPregunta").value;
+            cadena=cadena.toUpperCase();
+
+            let res1=document.getElementById("res1").innerHTML= inicial.test(cadena);
+            let res2=document.getElementById("res2").innerHTML=saberSobreEl.test(cadena);
+            let res3=document.getElementById("res3").innerHTML=conocimientos.test(cadena);
+            let res4=document.getElementById("res4").innerHTML=servicios.test(cadena);
+            let res5=document.getElementById("res5").innerHTML=proyectos.test(cadena);
+            let res6=document.getElementById("res6").innerHTML=contactarlo.test(cadena);
+            let res7=document.getElementById("res7").innerHTML=gracias.test(cadena);
+            let res8=document.getElementById("res8").innerHTML=temas.test(cadena);
+            
+            
+            if (res1) {
+                codigo=1;
+            }else if(res2){
+                codigo=2;
+            }else if(res3){
+                codigo=3;
+            }else if(res4){
+                codigo=4;
+            }else if(res5){
+                codigo=5;
+            }else if(res6){
+                codigo=6;
+            }else if(res7){
+                codigo=7;
+            }else if(res8){
+                codigo=8;
+            }else{
+                codigo=9;
+            }
+
+            responder();
+        }
+
+        function responder(){
+            switch (codigo) {
+                case 1:
+                    mensaje="Hola y bienvenido, soy el asistente virtual del ingeniero informático BRAYAN MEZA en que te puedo ayudar: <br> <br>"+
+                    "- SOBRE EL.<br>"+
+                    "- CONOCIMIENTOS.<br>"+
+                    "- SERVICIOS.<br>"+
+                    "- PROYECTOS.<br>"+
+                    "- CONTACTO<br>";
+                    break;
+                case 2:
+                    mensaje="¡¡Claro que sí!!, actualmente está culminando su carrera en la institución universitaria Colegio Mayor Del cauca en el programa de ingeniería informática además de formación en desarrollador Full-Stack con Oracle One. Estaría muy encantado de poder trabajar para ti. algo mas que quieras saber:<br> <br>"+
+                    "- CONOCIMIENTOS.<br>"+
+                    "- SERVICIOS.<br>"+
+                    "- PROYECTOS.<br>"+
+                    "- CONTACTO<br><br>"+
+                    "¡¡Algo más que pueda hacer por ti!! Recuerda que estoy aquí para ayudarte.";
+                    break;
+                case 3:
+                    mensaje="El ingeniero Brayan Meza enfocado en desarrollador Full-Stack cuenta con conocimientos en el Desarrollo y arquitectura de sitios web, diseño de interfases de usuario y elementos front-End. Desarrollar aplicaciones back-end. Aseguramiento y optimización de sitios web e interfases de usuario como la escalabilidad de tu sitio web. ¡¡Genial no!! Que esperas para decidirte a trabajar con él. Si es así puedes contactarlo o decirme algo mas en lo que te pueda ayudar.<br><br>"+
+                    "-SOBRE EL.<br>"+
+                    "-SERVICIOS.<br>"+
+                    "-PROYECTOS.<br>"+
+                    "-CONTACTO<br>";
+                    break;
+                    
+                case 4:
+                    mensaje="El ingeniero Brayan meza cuenta con un amplio campo de conocimiento para ofrecerte en el desarrollo de tu aplicación o servicio web como lo es: <br>"+
+                    "- Desarrollar la arquitectura del sitio web.<br>"+
+                    "- Diseñar interfaces de usuario y otros componentes Front End.<br>"+
+                    "- Desarrollar aplicaciones Back End.<br>"+
+                    "- Crear bases de datos y servidores.<br>"+
+                    "- Supervisar la velocidad y escalabilidad del software.<br>"+
+                    "- Gestionar proyectos complejos.<br>"+
+                    "Espero que la información suministrada te sea de gran ayuda para que decidas ponerte en contacto inmediato. Recuerda estoy aquí para ayudarte…<br>"+
+                    "- SOBRE EL.<br>"+
+                    "- CONOCIMIENTOS.<br>"+
+                    "- PROYECTOS.<br>"+
+                    "- CONTACTO<br>";
+                    break;
+                case 5:
+                    mensaje="¡¡CLARO!! A lo largo de su carrera a trabajado en proyectos universitarios para la culminación de su carrera, así como retos de su otra academia de estudio te dejare algunos enlaces de algunos de sus proyectos que se encuentran en la web:<br>"+
+                    "URL: <br> URL: <br>"+
+                    "Espero que te haya gustado mucho su trabajo. Algo mas en lo que te pueda colaborar.<br>"+
+                    "SOBRE EL.<br>"+
+                    "CONOCIMIENTOS.<br>"+
+                    "SERVICIOS.<br>"+
+                    "CONTACTO<br>";
+                    break;
+                case 6:
+                    mensaje="¡¡Genial!! para comunicarte con el puedes enviar un msj a su correo electronico brayanmesz1998@gmail.com<br> <br>"+
+                    "O en la parte inferior te puedo redireccionar a sus redes";
+                    
+                    break;
+                case 7:
+                    mensaje="Espero que mi servicio haya sido de tu agrado. Recuerda soy el y estaré aquí para lo que necesites…";
+                    break;
+                case 8:
+                    mensaje="los temas son los siguientes referentes al portafolio del ing brayan meza <br>"+
+                    "SOBRE EL.<br>"+
+                    "CONOCIMIENTOS.<br>"+
+                    "SERVICIOS.<br>"+
+                    "PROYECTOS.<br>"+
+                    "CONTACTO<br>";
+                    break;
+                case 9:
+                    nem++;
+                    
+                    if (nem==1) {
+                        mensaje="Lo siento tu mensaje no fue lo suficinete mente claro...";
+                    }else if (nem==2){
+                        mensaje="Solo puedo hablar de los temas que te he propuesto";
+                    }
+                    else if (nem==3){
+                        mensaje="Lo siento no estamos teniendo una buena comunicacion te solicito que seas mas claro";
+                    }
+                    else if (nem==4){
+                        mensaje="Te pido que seas mas especifico en lo que me dices";
+                        nem=0;
+                    }
+                    break;
+                default:
+                    mensaje=""
+                    break;
+            }
+            document.getElementById("respuesta").innerHTML=mensaje;
+        }
+
+    </script>
+</body>
+</html>
