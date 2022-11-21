@@ -169,7 +169,8 @@ function responder(){
             if (nem==1) {
                 mensaje="Lo siento tu mensaje no fue lo suficinete mente claro...😩";
             }else if (nem==2){
-                mensaje="Solo puedo hablar de los temas que te he propuesto..🥺";
+                mensaje="Solo puedo hablar de los temas que te he propuesto..🥺<br><br>"+
+                "✅ TEMAS";
             }
             else if (nem==3){
                 mensaje="No estamos teniendo una buena comunicacion😕 te solicito que seas mas claro🥺";
@@ -185,7 +186,7 @@ function responder(){
             }else if(nem==8){
                 mensaje="Vamos resume lo que me quieres decir...😕";
             }else if(nem==9){
-                mensaje="f en el chat..";
+                mensaje="f en el chat..😕😕😕";
             }
             break;
         default:
