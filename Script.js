@@ -10,7 +10,7 @@ let conocimientos= RegExp("(CONOCIMIENTOS|SABE)");
 let servicios= RegExp("(SERVICIOS|SERVICIO)");
 let proyectos= RegExp("(PROYECTO|PROYECTOS)");
 let contactarlo= RegExp("(CONTACTARLO|CONTACTO|CONTACTA|CONTACTAME)");
-let gracias= RegExp("(GRACIAS|GRACI|SALIR|ME VOY)");
+let gracias= RegExp("(GRACIAS|GRACI|SALIR|ME VOY|CHAO)");
 let temas= RegExp("(TEMAS|TEMA)");
 let chetsitto=RegExp("(TU|NOMBRE|ERES|LLAMAS)")
 
